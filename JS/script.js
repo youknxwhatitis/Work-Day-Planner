@@ -1,3 +1,5 @@
+var btnEight = $("eight");
+var inputEight = $("8")
 var btnNine = $("#nine");
 var inputNine = $("#9");
 var btnTen = $("#ten");
@@ -12,10 +14,19 @@ var btnTwo = $("#two");
 var inputTwo = $("#2");
 var btnThree = $("#three");
 var inputThree = $("#3");
-var btnFour = $("#four");
-var inputFour = $("#4");
+
 
 onPageLoad();
+
+// Setting the local date and time to the current day paragraph.
+function getCurrentDate() {
+	var today = moment().format("MMMM Do YYYY, h:mm:ss a");
+	var currentDay = $("#currentDay");
+	currentDay.html(today);
+}
+
+// Sets the current hour to military time.
+let hour = moment().format("H");
 
 // Runs the setValue and getCurrentDate functions on page load.
 function onPageLoad() {
@@ -24,6 +35,7 @@ function onPageLoad() {
 
 	// Creates an array of local storage keys.
 	var keys = [
+        "entryEight",
 		"entryNine",
 		"entryTen",
 		"entryElev",
@@ -49,6 +61,10 @@ function onPageLoad() {
 
 // Set the value of the text areas to local storage when the save button is clicked.
 function setValue() {
+    $(btnEight).on("click", function () {
+		var inputNineValue = $("#8").val();
+		localStorage.setItem("entryNine", inputNineValue);
+	});
 	$(btnNine).on("click", function () {
 		var inputNineValue = $("#9").val();
 		localStorage.setItem("entryNine", inputNineValue);
@@ -77,24 +93,16 @@ function setValue() {
 		var inputThreeValue = $("#3").val();
 		localStorage.setItem("entryThree", inputThreeValue);
 	});
-	$(btnFour).on("click", function () {
-		var inputFourValue = $("#4").val();
-		localStorage.setItem("entryFour", inputFourValue);
-	});
+
 }
 
-// Setting the local date and time to the current day paragraph.
-function getCurrentDate() {
-	var today = moment().format("dddd, MMMM Do");
-	var currentDay = $("#currentDay");
-	currentDay.html(today);
-}
 
-// Sets the current hour to military time.
-const hour = moment().format("H");
+
+
 
 // Creates an array of the text areas.
 var hourArray = [];
+hourArray.push($(".eight"));
 hourArray.push($(".nine"));
 hourArray.push($(".ten"));
 hourArray.push($(".eleven"));
@@ -105,6 +113,7 @@ hourArray.push($(".three"));
 hourArray.push($(".four"));
 
 // Gives the text areas number values according to military time.
+$(".eight").data("val",8);
 $(".nine").data("val", 9);
 $(".ten").data("val", 10);
 $(".eleven").data("val", 11);
