@@ -27,50 +27,30 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+      <p id="currentDate" class="lead"></p>
     </header>
     <div class="container">
+      <section class="row">
       <!-- Timeblocks go here -->
-    </div>
-
-    <div class="timesection">
-      <div class="safdf">
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-          <button type="button">Save</button>
-        </div>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-          <button type="button">Save</button>
-        </div>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-          <button type="button">Save</button>
-        </div>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-          <button type="button">Save</button>
-        </div>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-          <button type="button">Save</button>
-        </div>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-          <button type="button">Save</button>
-        </div>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-          <button type="button">Save</button>
-        </div>
-      </div>
-    </div>
+      <div class="row">
+        <div class="timesection-12">
+          <section class="row"> 
+            
+              <div class="row" data-hour="9"><span class="hour"> 9AM</span><span><textarea class="description nine" id="9"></textarea></span><span><button class="saveBtn" id="nine"><i class="fas fa-save"></i></button></span></div>
+              <div class="row" data-hour="10"><span class="hour">10AM</span><span><textarea class="description ten" id="10"></textarea></span><span><button class="saveBtn" id="ten"><i class="fas fa-save"></i></button></span></div>
+              <div class="row" data-hour="11"><span class="hour">11AM</span><span><textarea class="description eleven" id="11"></textarea></span><span><button class="saveBtn" id="eleven"><i class="fas fa-save"></i></button></span></div>
+              <div class="row" data-hour="12"><span class="hour">12PM</span><span><textarea class="description twelve" id="12"></textarea></span><span><button class="saveBtn" id="twelve"><i class="fas fa-save"></i></button></span></div>
+              <div class="row" data-hour="1"><span class="hour"> 1PM</span><span><textarea class="description one" id="1"></textarea></span><span><button class="saveBtn" id="one"><i class="fas fa-save"></i></button></span></div>
+              <div class="row" data-hour="2"><span class="hour"> 2PM</span><span><textarea class="description two" id="2"></textarea></span><span><button class="saveBtn" id="two"><i class="fas fa-save"></i></button></span></div>
+              <div class="row" data-hour="3"><span class="hour"> 3PM</span><span><textarea class="description three" id="3"></textarea></span><span><button class="saveBtn" id="three"><i class="fas fa-save"></i></button></span></div>
+              <div class="row" data-hour="4"><span class="hour"> 4PM</span><span><textarea class="description four" id="4"></textarea></span><span><button class="saveBtn" id="four"><i class="fas fa-save"></i></button></span></div> 
+          </section>
+        </div> 
+    </div> 
+    
+      
+    
+    
 
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
