@@ -18,22 +18,22 @@ var inputThree = $("#3");
 
 onPageLoad();
 
-// Setting the local date and time to the current day paragraph.
+// sets local time and date 
 function getCurrentDate() {
 	var today = moment().format("MMMM Do YYYY, h:mm:ss a");
 	var currentDay = $("#currentDay");
 	currentDay.html(today);
 }
 
-// Sets the current hour to military time.
+
 let hour = moment().format("H");
 
-// Runs the setValue and getCurrentDate functions on page load.
+
 function onPageLoad() {
 	setValue();
 	getCurrentDate();
 
-	// Creates an array of local storage keys.
+	// created an array for local storage key frames
 	var keys = [
         "entryEight",
 		"entryNine",
@@ -43,10 +43,9 @@ function onPageLoad() {
 		"entryOne",
 		"entryTwo",
 		"entryThree",
-		"entryFour",
 	];
 
-	// Gets the values from all of the local Storage keys and sets those values to the corresponding text area.
+	
 	for (var i = 0; i < localStorage.length; i++) {
 		inputNine.val(localStorage.getItem(keys[0]));
 		inputTen.val(localStorage.getItem(keys[1]));
@@ -59,7 +58,7 @@ function onPageLoad() {
 	}
 }
 
-// Set the value of the text areas to local storage when the save button is clicked.
+//sets value when clicking button 
 function setValue() {
     $(btnEight).on("click", function () {
 		var inputNineValue = $("#8").val();
@@ -100,7 +99,7 @@ function setValue() {
 
 
 
-// Creates an array of the text areas.
+// push array 
 var hourArray = [];
 hourArray.push($(".eight"));
 hourArray.push($(".nine"));
@@ -110,9 +109,9 @@ hourArray.push($(".twelve"));
 hourArray.push($(".one"));
 hourArray.push($(".two"));
 hourArray.push($(".three"));
-hourArray.push($(".four"));
 
-// Gives the text areas number values according to military time.
+
+
 $(".eight").data("val",8);
 $(".nine").data("val", 9);
 $(".ten").data("val", 10);
@@ -121,9 +120,9 @@ $(".twelve").data("val", 12);
 $(".one").data("val", 13);
 $(".two").data("val", 14);
 $(".three").data("val", 15);
-$(".four").data("val", 16);
 
-// Set the colors of the text areas to relfect the current time, past and future.
+
+// changes color based on time
 function setColors() {
 	for (i = 0; i < hourArray.length; i++) {
 		console.log(hourArray[i].data("val"));
